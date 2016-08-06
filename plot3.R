@@ -14,7 +14,7 @@ subsetdata$Timestamp <- strptime(paste(subsetdata$Date, subsetdata$Time), "%d/%m
 dev.copy(png,file="plot3.png",width=480,height=480)
 par(mar=c(4,4,2,0),oma=c(0,0,5,0))
 
-plot(subsetdata$Timestamp, Sub_metering_1, type = "l", xlab = "", ylab = "Energy Sub Metering")
+plot(subsetdata$Timestamp, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(subsetdata$Timestamp,Sub_metering_2, type = "l",col="red")
 lines(subsetdata$Timestamp,Sub_metering_3, type = "l",col="blue")
 legend("topright",lty = 1,col=c("Black", "red", "blue"),legend = c( "Sub_metering_1", "Sub_metering_2", "Sub_metering_3") )
