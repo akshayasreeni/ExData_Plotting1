@@ -12,7 +12,7 @@ Sub_metering_3<-as.numeric(subsetdata$Sub_metering_3)
 subsetdata$Timestamp <- strptime(paste(subsetdata$Date, subsetdata$Time), "%d/%m/%Y %H:%M:%S") 
 
 dev.copy(png,file="plot3.png",width=480,height=480)
-par(mar=c(4,4,2,0),oma=c(0,0,5,0))
+par(mar=c(4,4,2,1),oma=c(0,0,5,0))
 
 plot(subsetdata$Timestamp, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(subsetdata$Timestamp,Sub_metering_2, type = "l",col="red")
